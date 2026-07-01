@@ -1,0 +1,23 @@
+{
+  "name": "BovineLabs.Timeline.Traverse.Data",
+  "rootNamespace": "",
+  "references": [
+    "BovineLabs.Core",
+    "BovineLabs.Core.Extensions",
+    "Unity.Burst",
+    "Unity.Collections",
+    "Unity.Entities",
+    "Unity.Mathematics",
+    "BovineLabs.Reaction.Data"
+  ],
+  "optionalUnityReferences": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

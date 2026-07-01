@@ -1,0 +1,12 @@
+{
+  "name": "com.bovinelabs.timeline.traverse",
+  "displayName": "BovineLabs Timeline Traverse",
+  "version": "0.1.0",
+  "unity": "6000.6",
+  "unityRelease": "0a5",
+  "description": "DOTS Timeline tracks that drive BovineLabs Traverse navigation. A Navigation track bound to an agent's Targets lets timeline clips path an agent to a point/target (MoveTo), steer it in a direction (Steer), or halt it (Stop) — writing CrowdAgentData + IsPathfinding. Pair with the Reaction.Timeline bridge to fire these from gameplay reactions.",
+  "author": {
+    "name": "BovineLabs"
+  },
+  "hideInEditor": false
+}

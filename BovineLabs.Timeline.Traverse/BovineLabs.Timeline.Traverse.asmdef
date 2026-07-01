@@ -1,0 +1,32 @@
+{
+  "name": "BovineLabs.Timeline.Traverse",
+  "rootNamespace": "",
+  "references": [
+    "BovineLabs.Core",
+    "BovineLabs.Core.Extensions",
+    "BovineLabs.Timeline.Traverse.Data",
+    "Unity.Burst",
+    "Unity.Collections",
+    "Unity.Entities",
+    "Unity.Mathematics",
+    "Unity.Mathematics.Extensions",
+    "Unity.Transforms",
+    "BovineLabs.Timeline",
+    "BovineLabs.Timeline.Data",
+    "BovineLabs.Reaction.Data",
+    "BovineLabs.Movement.Data"
+  ],
+  "optionalUnityReferences": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_EDITOR || !BL_DISABLE_NAVMESH",
+    "UNITY_EDITOR || !UNITY_CLIENT || BL_NAVMESH_CLIENT || BL_NAVMESH_CLIENT_NO_AVOIDANCE"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

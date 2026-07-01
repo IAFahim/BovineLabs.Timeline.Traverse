@@ -1,0 +1,24 @@
+{
+    "name": "Vex.NavDemo",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Entities",
+        "Unity.Entities.Hybrid",
+        "Unity.Mathematics",
+        "Unity.Transforms",
+        "Unity.Collections",
+        "Unity.Burst",
+        "BovineLabs.Movement.Data",
+        "BovineLabs.Core",
+        "BovineLabs.Quill"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,38 @@
+{
+  "name": "BovineLabs.Timeline.Traverse.Tests",
+  "rootNamespace": "",
+  "references": [
+    "BovineLabs.Core",
+    "BovineLabs.Core.Extensions",
+    "BovineLabs.Testing",
+    "BovineLabs.Timeline.Traverse",
+    "BovineLabs.Timeline.Traverse.Authoring",
+    "BovineLabs.Timeline.Traverse.Data",
+    "Unity.Burst",
+    "Unity.Collections",
+    "Unity.Entities",
+    "Unity.Entities.Graphics",
+    "Unity.Entities.Hybrid",
+    "Unity.Mathematics",
+    "Unity.Mathematics.Extensions",
+    "Unity.PerformanceTesting",
+    "Unity.Transforms",
+    "BovineLabs.Timeline.Data",
+    "BovineLabs.Reaction.Data",
+    "BovineLabs.Movement.Data"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
