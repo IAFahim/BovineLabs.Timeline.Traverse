@@ -223,6 +223,13 @@ namespace BovineLabs.Timeline.Traverse
 
             public void Execute()
             {
+                // Two passes so an enter (Enable=true) always beats a same-frame exit (Enable=false)
+                // on the same agent. Back-to-back MoveTo/Steer clips would otherwise freeze the agent:
+                // the outgoing clip's disable is enqueued after (and under FIFO applied after) the
+                // incoming clip's enable, and cross-agent enqueue order is nondeterministic across
+                // Client/Server worlds. Deferring enables to pass 2 makes the resolution deterministic.
+                var enables = new NativeList<Entity>(this.Commands.Count, Allocator.Temp);
+
                 while (this.Commands.TryDequeue(out var c))
                 {
                     if (c.SetTarget && this.AgentData.HasComponent(c.Agent))
@@ -245,8 +252,20 @@ namespace BovineLabs.Timeline.Traverse
 
                     if (c.SetEnable && this.Pathfinding.HasComponent(c.Agent))
                     {
-                        this.Pathfinding.SetComponentEnabled(c.Agent, c.Enable);
+                        if (c.Enable)
+                        {
+                            enables.Add(c.Agent);
+                        }
+                        else
+                        {
+                            this.Pathfinding.SetComponentEnabled(c.Agent, false);
+                        }
                     }
+                }
+
+                for (var i = 0; i < enables.Length; i++)
+                {
+                    this.Pathfinding.SetComponentEnabled(enables[i], true);
                 }
             }
         }
