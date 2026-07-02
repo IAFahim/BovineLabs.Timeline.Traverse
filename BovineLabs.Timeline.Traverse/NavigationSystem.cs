@@ -231,6 +231,7 @@ namespace BovineLabs.Timeline.Traverse
                         if (c.IsDirection)
                         {
                             d.TargetDirection = c.Value;
+                            d.QueryFilterType = c.FilterType;
                         }
                         else
                         {
