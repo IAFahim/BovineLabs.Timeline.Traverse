@@ -30,6 +30,16 @@ namespace BovineLabs.Timeline.Traverse.Data
     }
 
     /// <summary>
+    /// Per-clip runtime state for a non-Follow MoveTo: whether the destination has been delivered this activation.
+    /// Lets the write RETRY across active frames until the target's Targets/LocalToWorld resolve, instead of being
+    /// lost forever when the target isn't ready on the single enter frame. Re-armed on each activation edge.
+    /// </summary>
+    public struct MoveToState : IComponentData
+    {
+        public bool Delivered;
+    }
+
+    /// <summary>
     /// Clip payload: steer the bound agent in a world-space direction (velocity mode, no corridor goal).
     /// Re-written every active frame. Magnitude scales speed.
     /// </summary>

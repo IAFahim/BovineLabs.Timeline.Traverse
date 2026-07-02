@@ -83,7 +83,8 @@ namespace BovineLabs.Timeline.Traverse
             [ReadOnly] public ComponentLookup<Targets> TargetsLookup;
             [ReadOnly] public ComponentLookup<LocalToWorld> LtwLookup;
 
-            private void Execute(in TrackBinding binding, in MoveToData data, EnabledRefRO<ClipActivePrevious> activePrev)
+            private void Execute(in TrackBinding binding, in MoveToData data, ref MoveToState state,
+                EnabledRefRO<ClipActivePrevious> activePrev)
             {
                 var agent = binding.Value;
                 if (agent == Entity.Null)
@@ -91,9 +92,16 @@ namespace BovineLabs.Timeline.Traverse
                     return;
                 }
 
-                // Write once on enter; re-write every frame only when following a (moving) target.
+                // Re-arm on the activation edge so a re-entry re-delivers.
                 var isFirstFrame = !activePrev.ValueRO;
-                if (!isFirstFrame && !data.Follow)
+                if (isFirstFrame)
+                {
+                    state.Delivered = false;
+                }
+
+                // Non-Follow: deliver once, but RETRY across active frames until the target resolves (a single
+                // enter-frame miss no longer loses the move). Follow: re-write every frame to chase a moving target.
+                if (!data.Follow && state.Delivered)
                 {
                     return;
                 }
@@ -107,13 +115,13 @@ namespace BovineLabs.Timeline.Traverse
                 {
                     if (!TargetsLookup.TryGetComponent(agent, out var targets))
                     {
-                        return;
+                        return; // unresolved this frame; Delivered stays false → retry next frame
                     }
 
                     var dest = targets.Get(data.Destination, agent);
                     if (dest == Entity.Null || !LtwLookup.TryGetComponent(dest, out var ltw))
                     {
-                        return;
+                        return; // unresolved this frame; Delivered stays false → retry next frame
                     }
 
                     pos = ltw.Position;
@@ -130,6 +138,11 @@ namespace BovineLabs.Timeline.Traverse
                     SetEnable = true,
                     Enable = true,
                 });
+
+                if (!data.Follow)
+                {
+                    state.Delivered = true;
+                }
             }
         }
 

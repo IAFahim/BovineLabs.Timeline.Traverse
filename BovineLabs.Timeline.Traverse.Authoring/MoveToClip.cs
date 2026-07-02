@@ -50,6 +50,7 @@ namespace BovineLabs.Timeline.Traverse.Authoring
                 Extents = (half)extents,
                 QueryFilterType = queryFilterType,
             });
+            commands.AddComponent(default(MoveToState));
 
             base.Bake(clipEntity, context);
         }
