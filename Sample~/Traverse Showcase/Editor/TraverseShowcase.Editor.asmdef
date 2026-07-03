@@ -1,0 +1,41 @@
+{
+    "name": "BovineLabs.Timeline.Traverse.Sample.TraverseShowcase",
+    "rootNamespace": "",
+    "references": [
+        "BovineLabs.Timeline.Traverse.Authoring",
+        "BovineLabs.Timeline.Traverse.Data",
+        "BovineLabs.Timeline.Traverse",
+        "BovineLabs.Reaction.Authoring",
+        "BovineLabs.Reaction.Data",
+        "BovineLabs.Core",
+        "BovineLabs.Core.Authoring",
+        "BovineLabs.Core.Extensions",
+        "BovineLabs.Timeline.Authoring",
+        "BovineLabs.Timeline.Data",
+        "BovineLabs.Timeline.Core.Authoring",
+        "BovineLabs.Movement",
+        "BovineLabs.Movement.Authoring",
+        "BovineLabs.Movement.Data",
+        "BovineLabs.NavMesh",
+        "BovineLabs.NavMesh.Authoring",
+        "BovineLabs.NavMesh.Data",
+        "Unity.Mathematics",
+        "Unity.Entities",
+        "Unity.Collections",
+        "Unity.Scenes",
+        "Unity.Timeline",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

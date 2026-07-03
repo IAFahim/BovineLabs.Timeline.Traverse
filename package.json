@@ -8,5 +8,12 @@
   "author": {
     "name": "BovineLabs"
   },
-  "hideInEditor": false
+  "hideInEditor": false,
+  "samples": [
+    {
+      "displayName": "Traverse Showcase",
+      "description": "Traverse timeline sample showing an agent dynamically chasing the current player.",
+      "path": "Sample~/Traverse Showcase"
+    }
+  ]
 }
