@@ -29,8 +29,9 @@ namespace BovineLabs.Timeline.Traverse.Data
         public byte QueryFilterType;
 
         /// <summary>
-        /// Follow only: halt (disable IsPathfinding) while within this distance of the destination, resuming when it
-        /// moves back out of range. Prevents ramming/jitter against a chased target. 0 = off.
+        /// Halt (disable IsPathfinding) while within this distance of the destination. A plain (non-follow) move
+        /// stops short here and stays halted; a follow resumes when the target moves back out of range
+        /// (prevents ramming/jitter against a chased target). 0 = off (walk to the exact point).
         /// </summary>
         public float StopDistance;
     }
@@ -43,6 +44,12 @@ namespace BovineLabs.Timeline.Traverse.Data
     public struct MoveToState : IComponentData
     {
         public bool Delivered;
+
+        /// <summary> Non-follow only: stopped short inside StopDistance; stays halted for the rest of this activation. </summary>
+        public bool Halted;
+
+        /// <summary> Non-follow only: destination latched at first resolve, so stop-distance checks ignore later target movement. </summary>
+        public float3 Destination;
     }
 
     /// <summary>

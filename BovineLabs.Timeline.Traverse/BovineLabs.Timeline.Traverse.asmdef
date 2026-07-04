@@ -10,11 +10,13 @@
     "Unity.Entities",
     "Unity.Mathematics",
     "Unity.Mathematics.Extensions",
+    "Unity.Physics",
     "Unity.Transforms",
     "BovineLabs.Timeline",
     "BovineLabs.Timeline.Data",
     "BovineLabs.Reaction.Data",
-    "BovineLabs.Movement.Data"
+    "BovineLabs.Movement.Data",
+    "BovineLabs.NavMesh.Data"
   ],
   "optionalUnityReferences": [],
   "includePlatforms": [],

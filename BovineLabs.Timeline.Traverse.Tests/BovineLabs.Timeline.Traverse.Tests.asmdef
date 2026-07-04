@@ -16,10 +16,14 @@
     "Unity.Mathematics",
     "Unity.Mathematics.Extensions",
     "Unity.PerformanceTesting",
+    "Unity.Physics",
     "Unity.Transforms",
     "BovineLabs.Timeline.Data",
     "BovineLabs.Reaction.Data",
-    "BovineLabs.Movement.Data"
+    "BovineLabs.Movement.Data",
+    "BovineLabs.NavMesh.Data",
+    "BovineLabs.Timeline.Traverse.Avoidance",
+    "BovineLabs.Avoidance.Data"
   ],
   "optionalUnityReferences": [
     "TestAssemblies"

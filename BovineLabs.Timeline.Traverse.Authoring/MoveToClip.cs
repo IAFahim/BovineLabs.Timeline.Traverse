@@ -23,7 +23,7 @@ namespace BovineLabs.Timeline.Traverse.Authoring
         public bool follow;
 
         [Min(0f)]
-        [Tooltip("Follow only: halt while within this distance of the destination, resuming when it moves out of range. 0 = off.")]
+        [Tooltip("Halt while within this distance of the destination. A plain move stops short here and stays; a follow resumes when the target moves out of range. 0 = off (walk to the exact point).")]
         public float stopDistance;
 
         [Header("Lifecycle")]

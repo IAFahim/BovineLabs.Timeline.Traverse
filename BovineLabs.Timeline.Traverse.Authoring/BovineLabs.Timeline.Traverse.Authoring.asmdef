@@ -13,9 +13,12 @@
     "Unity.Entities.Hybrid",
     "Unity.Mathematics",
     "Unity.Transforms",
+    "BovineLabs.Movement.Data",
     "BovineLabs.Reaction.Authoring",
     "BovineLabs.Reaction.Data",
     "BovineLabs.Timeline.Authoring",
+    "BovineLabs.Timeline.Traverse.Avoidance",
+    "BovineLabs.Timeline.Traverse.Avoidance.Authoring",
     "Unity.Timeline"
   ],
   "optionalUnityReferences": [],
