@@ -23,7 +23,9 @@
     "BovineLabs.Movement.Data",
     "BovineLabs.NavMesh.Data",
     "BovineLabs.Timeline.Traverse.Avoidance",
-    "BovineLabs.Avoidance.Data"
+    "BovineLabs.Avoidance.Data",
+    "BovineLabs.Essence.Data",
+    "BovineLabs.Timeline"
   ],
   "optionalUnityReferences": [
     "TestAssemblies"
@@ -37,6 +39,12 @@
   "precompiledReferences": [],
   "autoReferenced": false,
   "defineConstraints": [],
-  "versionDefines": [],
+  "versionDefines": [
+    {
+      "name": "com.bovinelabs.essence",
+      "expression": "",
+      "define": "BL_ESSENCE"
+    }
+  ],
   "noEngineReferences": false
 }

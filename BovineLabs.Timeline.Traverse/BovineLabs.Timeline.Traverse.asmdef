@@ -16,7 +16,8 @@
     "BovineLabs.Timeline.Data",
     "BovineLabs.Reaction.Data",
     "BovineLabs.Movement.Data",
-    "BovineLabs.NavMesh.Data"
+    "BovineLabs.NavMesh.Data",
+    "BovineLabs.Essence.Data"
   ],
   "optionalUnityReferences": [],
   "includePlatforms": [],
@@ -29,6 +30,12 @@
     "UNITY_EDITOR || !BL_DISABLE_NAVMESH",
     "UNITY_EDITOR || !UNITY_CLIENT || BL_NAVMESH_CLIENT || BL_NAVMESH_CLIENT_NO_AVOIDANCE"
   ],
-  "versionDefines": [],
+  "versionDefines": [
+    {
+      "name": "com.bovinelabs.essence",
+      "expression": "",
+      "define": "BL_ESSENCE"
+    }
+  ],
   "noEngineReferences": false
 }

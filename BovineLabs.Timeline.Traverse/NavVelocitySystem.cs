@@ -49,22 +49,23 @@ namespace BovineLabs.Timeline.Traverse
 
             var blendData = this.impl.Update(ref state);
 
-            var ecb = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>()
-                .CreateCommandBuffer(state.WorldUnmanaged);
+            // One pending buffer per job: creating a writer for a buffer an already-scheduled job writes is a
+            // main-thread safety violation, even with the jobs correctly chained.
+            var ecbSingleton = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
 
             state.Dependency = new ApplyJob
                 {
                     BlendData = blendData,
                     DesiredVelocities = SystemAPI.GetComponentLookup<DesiredVelocity>(),
                     ManualDrives = SystemAPI.GetComponentLookup<NavManualDrive>(true),
-                    ECB = ecb.AsParallelWriter(),
+                    ECB = ecbSingleton.CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter(),
                 }
                 .ScheduleParallel(blendData, 64, state.Dependency);
 
             state.Dependency = new RemoveJob
                 {
                     BlendData = blendData,
-                    ECB = ecb.AsParallelWriter(),
+                    ECB = ecbSingleton.CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter(),
                 }
                 .ScheduleParallel(state.Dependency);
         }

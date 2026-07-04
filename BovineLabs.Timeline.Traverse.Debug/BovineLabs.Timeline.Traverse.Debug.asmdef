@@ -1,27 +1,21 @@
 {
-  "name": "BovineLabs.Timeline.Traverse.Authoring",
+  "name": "BovineLabs.Timeline.Traverse.Debug",
   "rootNamespace": "",
   "references": [
     "BovineLabs.Core",
-    "BovineLabs.Core.Authoring",
     "BovineLabs.Core.Extensions",
-    "BovineLabs.Core.Extensions.Authoring",
+    "BovineLabs.Quill",
+    "BovineLabs.Timeline.Core.Debug",
+    "BovineLabs.Timeline",
+    "BovineLabs.Timeline.Data",
     "BovineLabs.Timeline.Traverse.Data",
+    "BovineLabs.Movement.Data",
+    "BovineLabs.Reaction.Data",
     "Unity.Burst",
     "Unity.Collections",
     "Unity.Entities",
-    "Unity.Entities.Hybrid",
     "Unity.Mathematics",
-    "Unity.Transforms",
-    "BovineLabs.Movement.Data",
-    "BovineLabs.Reaction.Authoring",
-    "BovineLabs.Reaction.Data",
-    "BovineLabs.Timeline.Authoring",
-    "BovineLabs.Timeline.Data",
-    "BovineLabs.Timeline.Traverse.Avoidance",
-    "BovineLabs.Timeline.Traverse.Avoidance.Authoring",
-    "Unity.Timeline",
-    "BovineLabs.Essence.Data"
+    "Unity.Transforms"
   ],
   "optionalUnityReferences": [],
   "includePlatforms": [],
@@ -31,7 +25,7 @@
   "precompiledReferences": [],
   "autoReferenced": false,
   "defineConstraints": [
-    "UNITY_EDITOR"
+    "UNITY_EDITOR || BL_DEBUG"
   ],
   "versionDefines": [
     {

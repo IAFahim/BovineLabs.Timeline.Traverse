@@ -59,6 +59,23 @@ Every line below fails **without a console error** when missed. In order:
 The full agent-facing field guide — drive contract, gotcha catalogue with signatures, unity-cli triage recipes — lives
 in `Plugins~/skills/unity-track-navigation/SKILL.md`.
 
+## Debug drawer
+
+`BovineLabs.Timeline.Traverse.Debug` (compiled only under `UNITY_EDITOR || BL_DEBUG`) ships `NavDebugSystem`, a
+Quill-based gizmo drawer for agents currently driven by a Navigation track. Toggle at runtime with the ConfigVar
+`bovinelabs.timeline.traverse.debug.draw` (default **off**; BovineLabs > ConfigVars, or set it from the console).
+Per active clip it draws:
+
+- **Move To** — destination sphere + line from the agent; `Stop Distance` ring when > 0; `MOVETO HALT` /
+  `MOVETO` state text.
+- **Steer Direction** — world-space direction arrow from the agent.
+- **Patrol** — the waypoint route polyline with per-waypoint markers, arrival-radius circles, and current-index
+  highlight; phase text (`Moving`/`Waiting`/`Done`).
+- Latched/unresolved destinations render dimmed, so a delivered-but-stale target is visually distinct from a live one.
+
+The drawer only reads component state — it never writes navigation data, so it is safe to leave enabled while
+reproducing bugs.
+
 ## Not included (yet)
 
 - Continuous manual-velocity drive (`DesiredVelocity` WriteGroup + ORCA `ManuallyControlled`) — needs live solver tuning.
