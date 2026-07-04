@@ -51,6 +51,48 @@ namespace BovineLabs.Timeline.Traverse.Tests
         }
 
         [Test]
+        public void MoveTo_FollowInsideStopDistance_DisablesPathfinding()
+        {
+            var agent = CreateAgent(pathfinding: true);
+            Manager.AddComponentData(agent, new LocalToWorld { Value = float4x4.Translate(new float3(4f, 0f, 4f)) });
+            var destination = CreatePoint(new float3(5f, 0f, 5f)); // ~1.41m away
+            Manager.SetComponentData(agent, new Targets { Target = destination });
+
+            CreateMoveToClip(agent, new MoveToData
+            {
+                Destination = Target.Target,
+                Follow = true,
+                StopDistance = 2f,
+            }, firstFrame: false);
+
+            RunSystem();
+
+            Assert.IsFalse(Manager.IsComponentEnabled<IsPathfinding>(agent));
+        }
+
+        [Test]
+        public void MoveTo_FollowOutsideStopDistance_WritesTargetAndEnablesPathfinding()
+        {
+            var agent = CreateAgent(pathfinding: false);
+            Manager.AddComponentData(agent, new LocalToWorld { Value = float4x4.Translate(new float3(-5f, 0f, -5f)) });
+            var destination = CreatePoint(new float3(5f, 0f, 5f));
+            Manager.SetComponentData(agent, new Targets { Target = destination });
+
+            CreateMoveToClip(agent, new MoveToData
+            {
+                Destination = Target.Target,
+                Follow = true,
+                StopDistance = 2f,
+            }, firstFrame: false);
+
+            RunSystem();
+
+            var data = Manager.GetComponentData<CrowdAgentData>(agent);
+            Assert.AreEqual(new float3(5f, 0f, 5f), data.TargetPosition);
+            Assert.IsTrue(Manager.IsComponentEnabled<IsPathfinding>(agent));
+        }
+
+        [Test]
         public void MoveTo_StopOnExit_DisablesPathfinding()
         {
             var agent = CreateAgent(pathfinding: true);
@@ -135,6 +177,7 @@ namespace BovineLabs.Timeline.Traverse.Tests
             var clip = Manager.CreateEntity();
             Manager.AddComponentData(clip, new TrackBinding { Value = agent });
             Manager.AddComponentData(clip, data);
+            Manager.AddComponent<MoveToState>(clip);
             AddClipState(clip, firstFrame, active);
         }
 

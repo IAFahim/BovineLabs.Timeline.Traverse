@@ -27,6 +27,12 @@ namespace BovineLabs.Timeline.Traverse.Data
 
         /// <summary> Index into NavMeshWorlds.Filters for this move's query. </summary>
         public byte QueryFilterType;
+
+        /// <summary>
+        /// Follow only: halt (disable IsPathfinding) while within this distance of the destination, resuming when it
+        /// moves back out of range. Prevents ramming/jitter against a chased target. 0 = off.
+        /// </summary>
+        public float StopDistance;
     }
 
     /// <summary>

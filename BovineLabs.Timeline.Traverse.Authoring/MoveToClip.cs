@@ -22,6 +22,10 @@ namespace BovineLabs.Timeline.Traverse.Authoring
         [Tooltip("Re-resolve and re-write the destination every active frame. Required to chase a moving target.")]
         public bool follow;
 
+        [Min(0f)]
+        [Tooltip("Follow only: halt while within this distance of the destination, resuming when it moves out of range. 0 = off.")]
+        public float stopDistance;
+
         [Header("Lifecycle")]
         [Tooltip(
             "Disable pathfinding when the clip ends (halt / hand control back). Leave off to let the agent keep walking to the last destination.")]
@@ -49,6 +53,7 @@ namespace BovineLabs.Timeline.Traverse.Authoring
                 StopOnExit = stopOnExit,
                 Extents = (half)extents,
                 QueryFilterType = queryFilterType,
+                StopDistance = stopDistance,
             });
             commands.AddComponent(default(MoveToState));
 

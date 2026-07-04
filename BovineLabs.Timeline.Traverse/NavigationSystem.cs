@@ -127,6 +127,16 @@ namespace BovineLabs.Timeline.Traverse
                     pos = ltw.Position;
                 }
 
+                // Follow-with-radius: hold position while inside StopDistance of the destination; the per-frame
+                // re-evaluation resumes the chase as soon as the destination moves back out of range.
+                if (data.Follow && data.StopDistance > 0 &&
+                    this.LtwLookup.TryGetComponent(agent, out var agentLtw) &&
+                    math.distancesq(agentLtw.Position, pos) <= data.StopDistance * data.StopDistance)
+                {
+                    this.Commands.Enqueue(new NavCommand { Agent = agent, SetEnable = true, Enable = false });
+                    return;
+                }
+
                 this.Commands.Enqueue(new NavCommand
                 {
                     Agent = agent,
