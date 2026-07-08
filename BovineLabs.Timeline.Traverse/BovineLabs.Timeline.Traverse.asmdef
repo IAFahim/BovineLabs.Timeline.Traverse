@@ -1,41 +1,42 @@
 {
-  "name": "BovineLabs.Timeline.Traverse",
-  "rootNamespace": "",
-  "references": [
-    "BovineLabs.Core",
-    "BovineLabs.Core.Extensions",
-    "BovineLabs.Timeline.Traverse.Data",
-    "Unity.Burst",
-    "Unity.Collections",
-    "Unity.Entities",
-    "Unity.Mathematics",
-    "Unity.Mathematics.Extensions",
-    "Unity.Physics",
-    "Unity.Transforms",
-    "BovineLabs.Timeline",
-    "BovineLabs.Timeline.Data",
-    "BovineLabs.Reaction.Data",
-    "BovineLabs.Movement.Data",
-    "BovineLabs.NavMesh.Data",
-    "BovineLabs.Essence.Data"
-  ],
-  "optionalUnityReferences": [],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": true,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": false,
-  "defineConstraints": [
-    "UNITY_EDITOR || !BL_DISABLE_NAVMESH",
-    "UNITY_EDITOR || !UNITY_CLIENT || BL_NAVMESH_CLIENT || BL_NAVMESH_CLIENT_NO_AVOIDANCE"
-  ],
-  "versionDefines": [
-    {
-      "name": "com.bovinelabs.essence",
-      "expression": "",
-      "define": "BL_ESSENCE"
-    }
-  ],
-  "noEngineReferences": false
+    "name": "BovineLabs.Timeline.Traverse",
+    "rootNamespace": "",
+    "references": [
+        "BovineLabs.Core",
+        "BovineLabs.Core.Extensions",
+        "BovineLabs.Timeline.Traverse.Data",
+        "Unity.Burst",
+        "Unity.Collections",
+        "Unity.Entities",
+        "Unity.Mathematics",
+        "Unity.Mathematics.Extensions",
+        "Unity.Physics",
+        "Unity.Transforms",
+        "BovineLabs.Timeline",
+        "BovineLabs.Timeline.Data",
+        "BovineLabs.Reaction.Data",
+        "BovineLabs.Movement.Data",
+        "BovineLabs.NavMesh.Data",
+        "BovineLabs.Essence.Data",
+        "BovineLabs.Nerve"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_EDITOR || !BL_DISABLE_NAVMESH",
+        "UNITY_EDITOR || !UNITY_CLIENT || BL_NAVMESH_CLIENT || BL_NAVMESH_CLIENT_NO_AVOIDANCE"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.bovinelabs.essence",
+            "expression": "",
+            "define": "BL_ESSENCE"
+        }
+    ],
+    "noEngineReferences": false
 }

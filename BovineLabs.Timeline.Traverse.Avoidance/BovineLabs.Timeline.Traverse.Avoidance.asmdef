@@ -1,24 +1,25 @@
 {
-  "name": "BovineLabs.Timeline.Traverse.Avoidance",
-  "rootNamespace": "",
-  "references": [
-    "BovineLabs.Avoidance.Data",
-    "BovineLabs.Timeline",
-    "BovineLabs.Timeline.Data",
-    "Unity.Burst",
-    "Unity.Collections",
-    "Unity.Entities"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": true,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": false,
-  "defineConstraints": [
-    "UNITY_EDITOR || !BL_DISABLE_NAVMESH",
-    "UNITY_EDITOR || !UNITY_CLIENT || BL_NAVMESH_CLIENT"
-  ],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "BovineLabs.Timeline.Traverse.Avoidance",
+    "rootNamespace": "",
+    "references": [
+        "BovineLabs.Avoidance.Data",
+        "BovineLabs.Timeline",
+        "BovineLabs.Timeline.Data",
+        "Unity.Burst",
+        "Unity.Collections",
+        "Unity.Entities",
+        "BovineLabs.Nerve"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_EDITOR || !BL_DISABLE_NAVMESH",
+        "UNITY_EDITOR || !UNITY_CLIENT || BL_NAVMESH_CLIENT"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

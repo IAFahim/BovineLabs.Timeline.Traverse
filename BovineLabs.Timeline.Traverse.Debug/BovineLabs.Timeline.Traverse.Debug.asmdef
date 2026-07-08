@@ -1,38 +1,39 @@
 {
-  "name": "BovineLabs.Timeline.Traverse.Debug",
-  "rootNamespace": "",
-  "references": [
-    "BovineLabs.Core",
-    "BovineLabs.Core.Extensions",
-    "BovineLabs.Quill",
-    "BovineLabs.Timeline.Core.Debug",
-    "BovineLabs.Timeline",
-    "BovineLabs.Timeline.Data",
-    "BovineLabs.Timeline.Traverse.Data",
-    "BovineLabs.Movement.Data",
-    "BovineLabs.Reaction.Data",
-    "Unity.Burst",
-    "Unity.Collections",
-    "Unity.Entities",
-    "Unity.Mathematics",
-    "Unity.Transforms"
-  ],
-  "optionalUnityReferences": [],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": true,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": false,
-  "defineConstraints": [
-    "UNITY_EDITOR || BL_DEBUG"
-  ],
-  "versionDefines": [
-    {
-      "name": "com.bovinelabs.essence",
-      "expression": "",
-      "define": "BL_ESSENCE"
-    }
-  ],
-  "noEngineReferences": false
+    "name": "BovineLabs.Timeline.Traverse.Debug",
+    "rootNamespace": "",
+    "references": [
+        "BovineLabs.Core",
+        "BovineLabs.Core.Extensions",
+        "BovineLabs.Quill",
+        "BovineLabs.Timeline.Core.Debug",
+        "BovineLabs.Timeline",
+        "BovineLabs.Timeline.Data",
+        "BovineLabs.Timeline.Traverse.Data",
+        "BovineLabs.Movement.Data",
+        "BovineLabs.Reaction.Data",
+        "Unity.Burst",
+        "Unity.Collections",
+        "Unity.Entities",
+        "Unity.Mathematics",
+        "Unity.Transforms",
+        "BovineLabs.Nerve"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_EDITOR || BL_DEBUG"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.bovinelabs.essence",
+            "expression": "",
+            "define": "BL_ESSENCE"
+        }
+    ],
+    "noEngineReferences": false
 }

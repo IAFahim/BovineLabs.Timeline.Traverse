@@ -1,50 +1,51 @@
 {
-  "name": "BovineLabs.Timeline.Traverse.Tests",
-  "rootNamespace": "",
-  "references": [
-    "BovineLabs.Core",
-    "BovineLabs.Core.Extensions",
-    "BovineLabs.Testing",
-    "BovineLabs.Timeline.Traverse",
-    "BovineLabs.Timeline.Traverse.Authoring",
-    "BovineLabs.Timeline.Traverse.Data",
-    "Unity.Burst",
-    "Unity.Collections",
-    "Unity.Entities",
-    "Unity.Entities.Graphics",
-    "Unity.Entities.Hybrid",
-    "Unity.Mathematics",
-    "Unity.Mathematics.Extensions",
-    "Unity.PerformanceTesting",
-    "Unity.Physics",
-    "Unity.Transforms",
-    "BovineLabs.Timeline.Data",
-    "BovineLabs.Reaction.Data",
-    "BovineLabs.Movement.Data",
-    "BovineLabs.NavMesh.Data",
-    "BovineLabs.Timeline.Traverse.Avoidance",
-    "BovineLabs.Avoidance.Data",
-    "BovineLabs.Essence.Data",
-    "BovineLabs.Timeline"
-  ],
-  "optionalUnityReferences": [
-    "TestAssemblies"
-  ],
-  "includePlatforms": [
-    "Editor"
-  ],
-  "excludePlatforms": [],
-  "allowUnsafeCode": true,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": false,
-  "defineConstraints": [],
-  "versionDefines": [
-    {
-      "name": "com.bovinelabs.essence",
-      "expression": "",
-      "define": "BL_ESSENCE"
-    }
-  ],
-  "noEngineReferences": false
+    "name": "BovineLabs.Timeline.Traverse.Tests",
+    "rootNamespace": "",
+    "references": [
+        "BovineLabs.Core",
+        "BovineLabs.Core.Extensions",
+        "BovineLabs.Testing",
+        "BovineLabs.Timeline.Traverse",
+        "BovineLabs.Timeline.Traverse.Authoring",
+        "BovineLabs.Timeline.Traverse.Data",
+        "Unity.Burst",
+        "Unity.Collections",
+        "Unity.Entities",
+        "Unity.Entities.Graphics",
+        "Unity.Entities.Hybrid",
+        "Unity.Mathematics",
+        "Unity.Mathematics.Extensions",
+        "Unity.PerformanceTesting",
+        "Unity.Physics",
+        "Unity.Transforms",
+        "BovineLabs.Timeline.Data",
+        "BovineLabs.Reaction.Data",
+        "BovineLabs.Movement.Data",
+        "BovineLabs.NavMesh.Data",
+        "BovineLabs.Timeline.Traverse.Avoidance",
+        "BovineLabs.Avoidance.Data",
+        "BovineLabs.Essence.Data",
+        "BovineLabs.Timeline",
+        "BovineLabs.Nerve"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.bovinelabs.essence",
+            "expression": "",
+            "define": "BL_ESSENCE"
+        }
+    ],
+    "noEngineReferences": false
 }

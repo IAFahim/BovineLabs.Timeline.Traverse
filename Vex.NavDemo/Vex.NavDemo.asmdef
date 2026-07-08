@@ -10,7 +10,8 @@
         "Unity.Burst",
         "BovineLabs.Movement.Data",
         "BovineLabs.Core",
-        "BovineLabs.Quill"
+        "BovineLabs.Quill",
+        "BovineLabs.Nerve"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

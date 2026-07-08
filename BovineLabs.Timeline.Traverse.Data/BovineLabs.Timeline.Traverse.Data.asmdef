@@ -1,33 +1,34 @@
 {
-  "name": "BovineLabs.Timeline.Traverse.Data",
-  "rootNamespace": "",
-  "references": [
-    "BovineLabs.Core",
-    "BovineLabs.Core.Extensions",
-    "Unity.Burst",
-    "Unity.Collections",
-    "Unity.Entities",
-    "Unity.Mathematics",
-    "BovineLabs.Reaction.Data",
-    "BovineLabs.Timeline",
-    "BovineLabs.Timeline.Data",
-    "BovineLabs.Movement.Data",
-    "BovineLabs.Essence.Data"
-  ],
-  "optionalUnityReferences": [],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": true,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": false,
-  "defineConstraints": [],
-  "versionDefines": [
-    {
-      "name": "com.bovinelabs.essence",
-      "expression": "",
-      "define": "BL_ESSENCE"
-    }
-  ],
-  "noEngineReferences": false
+    "name": "BovineLabs.Timeline.Traverse.Data",
+    "rootNamespace": "",
+    "references": [
+        "BovineLabs.Core",
+        "BovineLabs.Core.Extensions",
+        "Unity.Burst",
+        "Unity.Collections",
+        "Unity.Entities",
+        "Unity.Mathematics",
+        "BovineLabs.Reaction.Data",
+        "BovineLabs.Timeline",
+        "BovineLabs.Timeline.Data",
+        "BovineLabs.Movement.Data",
+        "BovineLabs.Essence.Data",
+        "BovineLabs.Nerve"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.bovinelabs.essence",
+            "expression": "",
+            "define": "BL_ESSENCE"
+        }
+    ],
+    "noEngineReferences": false
 }
